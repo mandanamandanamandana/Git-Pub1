@@ -23,6 +23,19 @@
                   
             <li>
                 <a href="/drinks/<%=i%>"><%=allDrinks[i].name %></a>
+             <% for(let i = 0; i < data.length; i+=1){ %>
+            <h2><%=data[i].name %></h2>
+        <img src="<%=data[i].img %>"alt="Image not found" />
+        <ul>
+            <li><%=data[i].type[0] %></li>
+            <li><%=data[i].type[i] %></li>
+        </ul>
+        <h3>HP: <%=data[i].stats.hp %></h3>
+        <h3>Attack: <%=data[i].stats.attack %></h3>
+        <h3>Defense: <%data[i].stats.defense %></h3>
+        <% } %>
+    </div>
+     <li>
             </li>
            <% } %>
         }
